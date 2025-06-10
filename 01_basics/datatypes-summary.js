@@ -46,4 +46,5 @@ console.log(typeof heros); // object (arrays are also objects in JS)
 console.log(typeof myObj); // object
 console.log(typeof myFunction); // function
 
+
 // https://262.ecma-international.org/5.1/#sec-11.4.3

@@ -42,9 +42,41 @@ const myFunction = function() { // Function
 // console.log(typeof userEmail); // undefined
 // console.log(typeof id); // symbol
 // console.log(typeof bigIntValue); // bigint
-console.log(typeof heros); // object (arrays are also objects in JS)
-console.log(typeof myObj); // object
-console.log(typeof myFunction); // function
+// console.log(typeof heros); // object (arrays are also objects in JS)
+// console.log(typeof myObj); // object
+// console.log(typeof myFunction); // function
 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Stack (Premitive Data Types) vs Heap (Non-Primitive Data Types)
+// Example
+
+let myYouTubename = "Shaktiman"; // Stack Memory
+let anotherName = myYouTubename; // Stack Memory
+anotherName = "Shaktiman Rocks"; // Stack Memory
+console.log(myYouTubename); // Shaktiman
+console.log(anotherName); // Shaktiman Rocks
+
+let userOne = {
+  email: "shaktiman@gmail.com", // Heap Memory
+  upi: "user@ypl", // Heap Memory
+};
+let userTwo = userOne; // Heap Memory
+userTwo.email = "tejveer@gmail.com"; // Heap Memory
+console.log(userOne.email); //
+console.log(userTwo.email); //
+
+// Stack vs Heap Memory
+// Stack Memory: Primitive data types (String, Number, Boolean, Null, Undefined, Symbol, BigInt)
+// Heap Memory: Non-primitive data types (Array, Object, Function)
+// Stack Memory: Stores values directly
+// Heap Memory: Stores references to values
+// Stack Memory: Faster access
+// Heap Memory: Slower access
+// Stack Memory: Limited size
+// Heap Memory: Larger size
+// Stack Memory: Automatically managed
+
+
